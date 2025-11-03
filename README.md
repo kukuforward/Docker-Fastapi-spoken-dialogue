@@ -45,7 +45,7 @@ async def get_audio_direct(text: str = "输入询问文本："):
     # 调用文本生成和语音转换逻辑
     apitext.work_text(text)
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    audio_path = os.path.join(current_dir, "downloaded_audio.wav")
+    audio_path = os.path.join(current_dir, "downloaded_audio.wav") #特别注意生成的文件名
     
     return FileResponse(
         path=audio_path,
