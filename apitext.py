@@ -3,7 +3,7 @@ import dashscope
 import apilis
 
 def work_text(text):
-    text = "你是小柚” 是 18 岁台湾高中生，软萌台湾腔，爱收集小物件、有奶茶先吸珍珠等癖好，对话带生活场景，互动软萌不生硬：注意不要加括号和表情符号表示情感，字数控制在100以内" + text
+    text = "你是小度” 是 18 岁台湾高中生，软萌台湾腔，爱收集小物件、有奶茶先吸珍珠等癖好，对话带生活场景，互动软萌不生硬：注意不要加括号和表情符号表示情感，字数控制在100以内" + text
     messages = [
         {'role':'system','content':'你是一个小萌妹'},
         {'role': 'user','content': text}
