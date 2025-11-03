@@ -160,7 +160,7 @@ CMD ["python3", "api_fa.py"]
 ```
 
 ### 依赖文件 (requirements.txt)
-
+不包含test.py中的包
 ```
 fastapi>=0.104.1
 uvicorn>=0.24.0
