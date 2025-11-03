@@ -7,14 +7,14 @@ import sys      # 系统相关参数和函数
 import time     # 时间相关操作
 import pyaudio  # 音频输入输出模块，用于麦克风录音
 import dashscope  # 阿里云DashScope SDK
-import api_work
 # 导入DashScope语音识别相关模块
 from dashscope.audio.qwen_omni import *
 from dashscope.audio.qwen_omni.omni_realtime import TranscriptionParams
 import pygame
 
 
-api_work.work_text("你好呀,你有什么问题嘛？")
+# api_work.work_text("你好呀,你有什么问题嘛？") 此处可以设置提示次回应
+
 
 
 def play_wav(wav_path):
@@ -235,7 +235,7 @@ class MyCallback(OmniRealtimeCallback):
             # 检查是否包含关键词
             for keyword in self.keywords:
                 if keyword in final_text:
-                    play_wav("hello.wav")
+                    # play_wav("hello.wav")
                     print(f"检测到关键词: '{keyword}'，开始记录'{self.recording_duration}'秒内的文本...")
                     self.start_recording()
                     break
@@ -328,7 +328,7 @@ class MyCallback(OmniRealtimeCallback):
             text = ""
             for i in content:
                 text += i + '。'
-            api_work.get_audio_direct(text=text)
+            api_work.get_audio_direct(text=text) #返回音频
             play_wav("work_v.wav")
             if self.recorded_texts:
                 print("\n记录内容摘要:")
